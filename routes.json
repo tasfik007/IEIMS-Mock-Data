@@ -1,5 +1,7 @@
 {
   "/institute-details/:instituteId": "/institutions?instituteId=:instituteId",
   "/institute-details-eiin/:eiin": "/institutions?eiin=:eiin",
-  "​/crvs-student-details/:studentCrvsId": "/crvs-students?studentCrvsId=:studentCrvsId"
+  "/crvs-students/:studentCrvsId": "/crvs-student-profile",
+  "/org-students/:studentOrgId": "/crvs-student-profile",
+  "/institutes/:eiin/classes/:classCode/versions-sections": "/version-sections"
 }

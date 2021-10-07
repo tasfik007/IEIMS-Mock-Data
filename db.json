@@ -43,12 +43,79 @@
           "mobileNo": "+8801295874632",
           "headOfInstitute": "Mohammad Mojibur Rahman",
           "district": "DHAKA"
-      }
+      },
+      {
+        "instituteId": "5",
+        "name": "Dinajpur Zilla School",
+        "name_bn": "দিনাজপুর জিলা স্কুল",
+        "eiin": "120719",
+        "address": "Dinajpur Sadar",
+        "phoneNo": "0531-78155",
+        "mobileNo": "+8801395854632",
+        "headOfInstitute": "Akhtara Parvin",
+        "district": "Dinajpur"
+    },
+    {
+        "instituteId": "6",
+        "name": "Ideal School and College",
+        "name_bn": "আইডিয়াল স্কুল ও কলেজ",
+        "eiin": "108277",
+        "address": "Motijheel, Dhaka",
+        "phoneNo": "02-48310177",
+        "mobileNo": "+8801375454632",
+        "headOfInstitute": "Dr. Shahan Ara Begum",
+        "district": "Dhaka"
+    },
+    {
+        "instituteId": "7",
+        "name": "Viqarunnisa Noon School & College",
+        "name_bn": "ভিকারুননিসা নূন স্কুল এন্ড কলেজ",
+        "eiin": "108277",
+        "address": "Ajimpur, Dhaka",
+        "phoneNo": "02-48310177",
+        "mobileNo": "+8801375454632",
+        "headOfInstitute": "Kamrun Nahar",
+        "district": "Dhaka"
+    },
+    {
+      "instituteId": "8",
+      "name": "B A F SHAHEEN COLLEGE KURMITOLA",
+      "name_bn": "বি  এ ফ শাহিন স্কুল অ্যান্ড কলেজ ",
+      "eiin": "107859",
+      "address": "Dhaka SENANIBUS",
+      "phoneNo": "02-48310177",
+      "mobileNo": "+8801375454632",
+      "headOfInstitute": "Fazle Kader Chowdhury",
+      "district": "Dhaka"
+  },
+  {
+    "instituteId": "9",
+    "name": "JARINA SIKDER GIRLS SCHOOL AND COLLEGE",
+    "name_bn": "জরিনা সিকডার গার্লস স্কুল অ্যান্ড কলেজ",
+    "eiin": "107983",
+    "address": "295/A TALI OFFICE ROAD",
+    "phoneNo": "02-8120631",
+    "mobileNo": "+8801785554632",
+    "headOfInstitute": "A N M Bazlur Rahman",
+    "district": "Dhaka"
+},
+{
+  "instituteId": "10",
+  "name": "HAZARIBAG GIRLS HIGH SCHOOL AND COLLEGE(BM)",
+  "name_bn": "হাজারিবাগ গার্লস উচ্চ বিদ্যালয় এবং কলেজ (বিএম)",
+  "eiin": "107983",
+  "address": "Hazaribag, Dhaka",
+  "phoneNo": "02-9673031",
+  "mobileNo": "+88016859854632",
+  "headOfInstitute": "MD. Anisul Islam",
+  "district": "Dhaka"
+}
+
   ],
   "crvs-students": [
     {
       "classLevel": "SIX",
-      "studentCrvsId": "1234",
+      "studentCrvsId": "12345-2021-12345",
       "studentOrgId": "1234567890",
       "name": "Muhibul Akhter",
       "name_bn": "মুহিবুল আখতার",
@@ -57,7 +124,7 @@
       "mothersName": "Shirin Akhter",
       "mothersName_bn": "শিরিন আখতার",
       "gender": "MALE",
-      "dateOfBirth": "2005-06-23",
+      "dateOfBirth": "2010-06-23",
       "religion": "ISLAM",
       "nationality": "BGD",
       "eiin": "123456",
@@ -74,29 +141,372 @@
     },
     {
       "classLevel": "SEVEN",
-      "studentCrvsId": "5261",
-      "studentOrgId": "4234567890",
+      "studentCrvsId": "67345-3121-12345",
+      "studentOrgId": "4487964545",
+      "name": "ABIR HUSEN",
+      "name_bn": "আবির হুসেন",
+      "fathersName": "Mustafa Ajmal",
+      "fathersName_bn": "মুস্তাফা আজমল ",
+      "mothersName": "Akhi Alam",
+      "mothersName_bn": "আঁখি আলাম",
+      "gender": "MALE",
+      "dateOfBirth": "2009-09-17",
+      "religion": "ISLAM",
+      "nationality": "BGD",
+      "eiin": "107859",
+      "classYear": 2020,
+      "section": "B",
+      "rollNo": "31",
+      "version": "BANGLA",
+      "shift": "DAY",
+      "group": "SCIENCE",
+      "mobileNo": "01694855479",
+      "email": "abir@hotmail.com",
+      "homeDistrict": "SYLHET",
+      "photo": "https://images.crvs.com/1478.png"
+    },
+    {
+      "classLevel": "EIGHT",
+      "studentCrvsId": "75454-7545-55454",
+      "studentOrgId": "1548796532",
       "name": "Tasrif Ahmed",
-      "name_bn": "মুহিবুল আখতার",
-      "fathersName": "Mustafa Akhter",
-      "fathersName_bn": "মুস্তাফা আখতার",
+      "name_bn": "তাসরিফ আহমেদ",
+      "fathersName": "Maksudur Ahmed",
+      "fathersName_bn": "মাক্সুদুর আহমেদ",
+      "mothersName": "Sharmin Ahmed",
+      "mothersName_bn": "শারমিন আহমেদ ",
+      "gender": "MALE",
+      "dateOfBirth": "2008-03-17",
+      "religion": "ISLAM",
+      "nationality": "BGD",
+      "eiin": "845621",
+      "classYear": 2020,
+      "section": "B",
+      "rollNo": "15",
+      "version": "BANGLA",
+      "shift": "MORNING",
+      "group": "SCIENCE",
+      "mobileNo": "01457896548",
+      "email": "tasrif@somemail.com",
+      "homeDistrict": "DINAJPUR",
+      "photo": "https://images.crvs.com/7894.png"
+    },
+    {
+      "classLevel": "EIGHT",
+      "studentCrvsId": "5444-8454-12457",
+      "studentOrgId": "7898456557",
+      "name": "Sharmin Sultana",
+      "name_bn": "শারম্মিন সুলতানা",
+      "fathersName": "Abdul Samad",
+      "fathersName_bn": "আব্দুল শামাদ",
+      "mothersName": "Shirin Parvin",
+      "mothersName_bn": "শিরিন পারভিন",
+      "gender": "FEMALE",
+      "dateOfBirth": "2008-02-15",
+      "religion": "ISLAM",
+      "nationality": "BGD",
+      "eiin": "4565",
+      "classYear": 2020,
+      "section": "A",
+      "rollNo": "08",
+      "version": "BANGLA",
+      "shift": "DAY",
+      "group": "SCIENCE",
+      "mobileNo": "01234587994",
+      "email": "sharmin@somemail.com",
+      "homeDistrict": "RANGPUR",
+      "photo": "https://images.crvs.com/4578.png"
+    },
+    {
+      "classLevel": "SEVEN",
+      "studentCrvsId": "15454-8754-67895",
+      "studentOrgId": "2345789856",
+      "name": "Asma Akhter",
+      "name_bn": "আসমা আখতার",
+      "fathersName": "Alauddin Aaual",
+      "fathersName_bn": "আলাউদ্দিন আউয়াল",
       "mothersName": "Shirin Akhter",
       "mothersName_bn": "শিরিন আখতার",
+      "gender": "FEMALE",
+      "dateOfBirth": "2009-04-11",
+      "religion": "ISLAM",
+      "nationality": "BGD",
+      "eiin": "4578",
+      "classYear": 2020,
+      "section": "B",
+      "rollNo": "44",
+      "version": "BANGLA",
+      "shift": "DAY",
+      "group": "SCIENCE",
+      "mobileNo": "01548795652",
+      "email": "asma@somemail.com",
+      "homeDistrict": "BARISAL",
+      "photo": "https://images.crvs.com/5487.png"
+    },
+    {
+      "classLevel": "SIX",
+      "studentCrvsId": "33215-4568-98745",
+      "studentOrgId": "9875642134",
+      "name": "Bijoya Ghosh",
+      "name_bn": "বিজয়া ঘোষ",
+      "fathersName": "Brojob Ghosh",
+      "fathersName_bn": "ব্রজব  ঘোষ",
+      "mothersName": "Adarshini Roy",
+      "mothersName_bn": "আদারশিনি রয়",
+      "gender": "FEMALE",
+      "dateOfBirth": "2010-06-23",
+      "religion": "HINDU",
+      "nationality": "BGD",
+      "eiin": "32155",
+      "classYear": 2020,
+      "section": "A",
+      "rollNo": "11",
+      "version": "BANGLA",
+      "shift": "DAY",
+      "group": "SCIENCE",
+      "mobileNo": "01354879554",
+      "email": "bijoya@somemail.com",
+      "homeDistrict": "SYLHET",
+      "photo": "https://images.crvs.com/7888.png"
+    },
+    {
+      "classLevel": "SIX",
+      "studentCrvsId": "20154-6058-94568",
+      "studentOrgId": "6789456321",
+      "name": "Bijoy Mandal",
+      "name_bn": "বিজয় মণ্ডল",
+      "fathersName": "Ashutosh Mondol",
+      "fathersName_bn": "আশুতোষ মণ্ডল",
+      "mothersName": "Brinda Rani De",
+      "mothersName_bn": "বৃন্দা রানি দে",
       "gender": "MALE",
-      "dateOfBirth": "2005-06-23",
+      "dateOfBirth": "2010-06-23",
+      "religion": "HINDU",
+      "nationality": "BGD",
+      "eiin": "123456",
+      "classYear": 2020,
+      "section": "B",
+      "rollNo": "13",
+      "version": "ENGLISH",
+      "shift": "MORNING",
+      "group": "SCIENCE",
+      "mobileNo": "013548796548",
+      "email": "bijoy@somemail.com",
+      "homeDistrict": "DINAJPUR",
+      "photo": "https://images.crvs.com/3215.png"
+    },
+    {
+      "classLevel": "SEVEN",
+      "studentCrvsId": "45444-3125-64587",
+      "studentOrgId": "6487545454",
+      "name": "Shahriar Islam",
+      "name_bn": "শাহরিয়ার ইসলাম",
+      "fathersName": "Abdus Salam",
+      "fathersName_bn": "আব্দুস সালাম",
+      "mothersName": "Ayrin Begum",
+      "mothersName_bn": "আয়রিন বেগম",
+      "gender": "MALE",
+      "dateOfBirth": "2009-11-18",
+      "religion": "ISLAM",
+      "nationality": "BGD",
+      "eiin": "321555",
+      "classYear": 2020,
+      "section": "A",
+      "rollNo": "33",
+      "version": "ENGLISH",
+      "shift": "MORNING",
+      "group": "COMMERCE",
+      "mobileNo": "012457845557",
+      "email": "shahriar@somemail.com",
+      "homeDistrict": "CHITTAGONG",
+      "photo": "https://images.crvs.com/54554.png"
+    },
+    {
+      "classLevel": "EIGHT",
+      "studentCrvsId": "12458-3232-65478",
+      "studentOrgId": "9784564854",
+      "name": "Tamzid Ahmed",
+      "name_bn": "তামজিদ আহমেদ",
+      "fathersName": "Farid Ahmed",
+      "fathersName_bn": "ফরিদ আহমেদ",
+      "mothersName": "Marjina Khanom",
+      "mothersName_bn": "মরজিনা খানম",
+      "gender": "MALE",
+      "dateOfBirth": "2008-06-23",
       "religion": "ISLAM",
       "nationality": "BGD",
       "eiin": "123456",
       "classYear": 2020,
-      "section": "A",
-      "rollNo": "25",
+      "section": "C",
+      "rollNo": "03",
       "version": "BANGLA",
-      "shift": "MORNING",
+      "shift": "DAY",
       "group": "SCIENCE",
-      "mobileNo": "01XXXXXXXXX",
+      "mobileNo": "012554784544",
+      "email": "tamzid@somemail.com",
+      "homeDistrict": "DHAKA",
+      "photo": "https://images.crvs.com/84545.png"
+    },
+    {
+      "classLevel": "SIX",
+      "studentCrvsId": "21545-3121-46786",
+      "studentOrgId": "8794546754",
+      "name": "Saifur Islam",
+      "name_bn": "শাইফুর ইসলাম",
+      "fathersName": "Shafikul Islam",
+      "fathersName_bn": "সাফিকুল ইসলাম",
+      "mothersName": "Shirin Akhter",
+      "mothersName_bn": "শিরিন আখতার",
+      "gender": "MALE",
+      "dateOfBirth": "2010-01-05",
+      "religion": "ISLAM",
+      "nationality": "BGD",
+      "eiin": "248798",
+      "classYear": 2020,
+      "section": "A",
+      "rollNo": "11",
+      "version": "ENGLISH",
+      "shift": "DAY",
+      "group": "COMMERCE",
+      "mobileNo": "01245985565",
       "email": "muhib@somemail.com",
       "homeDistrict": "BARISAL",
       "photo": "https://images.crvs.com/1234.png"
+    }
+  ],
+  "version-sections": [
+    {
+      "version": "BANGLA",
+      "shifts": [
+        {
+          "shift": "MORNING",
+          "internalResultRequirement": 3.25,
+          "specialResultRequirement": 3.5,
+          "externalResultRequirement": 4.5,
+          "sections": [
+            {
+              "section": "A",
+              "noOfSeat": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": "ENGLISH",
+      "shifts": [
+        {
+          "shift": "DAY",
+          "internalResultRequirement": 3.25,
+          "specialResultRequirement": 3.5,
+          "externalResultRequirement": 4.5,
+          "sections": [
+            {
+              "section": "B",
+              "noOfSeat": 50
+            }
+          ]
+        }
+      ]
+    }
+
+  ],
+  "institute-students":[
+    {
+      "studentCrvsId": "12345-2021-12345",
+      "studentOrgId": "1234567890",
+      "name": "Muhibul Akhter",
+      "name_bn": "মুহিবুল আখতার",
+      "classLevel": "SIX",
+      "section": "A",
+      "rollNo": "12",
+      "version": "BANGLA",
+      "shift": "MORNING",
+      "group": "SCIENCE",
+      "subjects": [
+        "BANGLA"
+      ],
+      "isThroughCad": false
+    },
+    {
+      "studentCrvsId": "4327-2021-12345",
+      "studentOrgId": "1534567890",
+      "name": "Tasrif Ahmed",
+      "name_bn": "মুহিবুল আখতার",
+      "classLevel": "SEVEN",
+      "section": "B",
+      "rollNo": "12",
+      "version": "BANGLA",
+      "shift": "MORNING",
+      "group": "SCIENCE",
+      "subjects": [
+        "BANGLA"
+      ],
+      "isThroughCad": false
+    }
+  ],
+  "student-results": [
+    {
+      "12345-2021-12345":{
+        "SIX":  {
+          "group": "SCIENCE",
+          "result": "A+",
+          "session": "2018-19",
+          "instituteId": "1234-5678-9010",
+          "eiin": "1234567890",
+          "instituteName": "Faridpur Zilla School",
+          "subjects": [
+            {
+              "subject": "BANGLA",
+              "marks": "A+"
+            }
+          ]
+        },
+        "SEVEN": {
+          "group": "SCIENCE",
+          "result": "A",
+          "session": "2020-21",
+          "instituteId": "1234-5678-9010",
+          "eiin": "1234567890",
+          "instituteName": "Faridpur Zilla School",
+          "subjects": [
+            {
+              "subject": "BANGLA",
+              "marks": "A+"
+            }
+          ]
+        }
+      },
+      "4327-2021-12345":{
+        "SIX":  {
+          "group": "SCIENCE",
+          "result": "A+",
+          "session": "2018-19",
+          "instituteId": "7234-5678-9010",
+          "eiin": "7234567890",
+          "instituteName": "Dinajpur Zilla School",
+          "subjects": [
+            {
+              "subject": "BANGLA",
+              "marks": "A+"
+            }
+          ]
+        },
+        "SEVEN": {
+          "group": "SCIENCE",
+          "result": "A",
+          "session": "2020-21",
+          "instituteId": "1234-5678-9010",
+          "eiin": "1234567890",
+          "instituteName": "Faridpur Zilla School",
+          "subjects": [
+            {
+              "subject": "BANGLA",
+              "marks": "A+"
+            }
+          ]
+        }
+      }
     }
   ]
 }
