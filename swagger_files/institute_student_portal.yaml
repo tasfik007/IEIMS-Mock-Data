@@ -1,0 +1,492 @@
+openapi: 3.0.0
+info:
+  title: API required from Institute Student Portal
+  description: Necessary API to be exposed from Institute Student Portal
+  version: 0.1.0
+paths:
+  /institutes/{eiin}/classes/{classCode}/versions-sections:
+    get:
+      tags: 
+      - Institute Student Portal
+      description: Get the list of versions, shifts and sections that the institute supports. In case of HSC level, each shift needs to have the minimum admission criteria and each section needs to have seating capacity.
+      operationId: getInstituteClassVersionShiftSectionList
+      parameters:
+      - name: eiin
+        in: path
+        description: The eiin number of an institute
+        required: true
+        schema:
+          type: string
+      - name: classCode
+        in: path
+        description: Unique code of the educational class
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Version, Shift and Section List By Institute And Class
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Version'
+        "404":
+          description: No institute exists with the given eiin
+  /institutes/{eiin}/classes/{classCode}/students:
+    get:
+      tags: 
+      - Institute Student Portal
+      description: Get the list of students of an institute for a particular version/class/shift/section/group
+      operationId: getStudentListOfInstitute
+      parameters:
+      - name: eiin
+        in: path
+        description: The eiin number of an institute
+        required: true
+        schema:
+          type: string
+      - name: classCode
+        in: path
+        description: Unique code of the educational class
+        required: true
+        schema:
+          type: string
+      - name: version
+        in: query
+        description: Unique code of the version
+        required: false
+        schema:
+          type: string
+      - name: shift
+        in: query
+        description: Unique code of the shift
+        required: false
+        schema:
+          type: string
+      - name: section
+        in: query
+        description: Unique code of the section
+        required: false
+        schema:
+          type: string
+      - name: group
+        in: query
+        description: Unique code of the group
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: list of students of an institute filtered by search params
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StudentBasicProfile'
+        "404":
+          description: No institute exists with the given eiin
+  /students/{crvsId}/class/{classCode}/result:
+    get:
+      tags: 
+      - Institute Student Portal
+      description: Get final exam result of a student by crvs id and class
+      operationId: getFinalExamResultByCrvsId
+      parameters:
+      - name: crvsId
+        in: path
+        description: The unique crvs id
+        required: true
+        schema:
+          type: string
+      - name: classCode
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: School final exam result by crvs id and class
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Result'
+        "404":
+          description: No student exists with the given crvs id
+  /institutes/{eiin}/affiliations:
+    get:
+      tags:
+      - Institute Student Portal
+      description: Get affiliated list of exams, groups and subjects by eiin of an institute
+      operationId: getInstituteAffiliatedExams
+      parameters:
+      - name: eiin
+        in: path
+        description: Institute eiin
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Affiliated Exams
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ExamType'
+        "404":
+          description: No institute exists with the given eiin
+  /institutes:
+    get:
+      tags:
+      - Institute Student Portal
+      description:  Get the list of institutes registered under the education board
+      parameters:
+      - name: examTypeCode
+        in: query
+        description: Unique code of the exam type
+        required: true
+        schema:
+          type: string
+      - name: districtCode
+        in: query
+        description: Unique code of the district (optional)
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: institute's list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InstituteProfile'
+  /crvs-students/{crvsId}:
+    get:
+      tags:
+      - Institute Student Portal
+      description: Get student profile information using CRVS-STD-ID
+      operationId: getCrvsStudentProfileByStdId
+      parameters:
+      - name: crvsId
+        in: path
+        description: The unique CRVS-STD-ID
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Profile Information of the Student
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentProfile'
+        "404":
+          description: Student with the given crvsId does not exist
+  /org-students/{orgId}:
+    get:
+      tags:
+      - Institute Student Portal
+      description: Get student profile information using ORG ID
+      operationId: getCrvsStudentProfileByOrgId
+      parameters:
+      - name: orgId
+        in: path
+        description: The unique CRVS-ORG-ID
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Profile Information of the Student
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentProfile'
+        "404":
+          description: Student with the given orgId does not exist
+  /affiliations/{examTypeCode}:
+    get:
+      tags:
+      - Institute Student Portal
+      description:  Get a list of institutes affiliated to an exam type
+      parameters:
+      - name: examTypeCode
+        in: path
+        description: Global exam type code
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: a list of institutes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/InstituteProfile'
+components:
+  schemas:
+    StudentBasicProfile:
+      required:
+        - name
+        - studentCrvsId
+      type: object
+      properties:
+        studentCrvsId:
+          type: string
+          example: 12345-2021-12345
+        studentOrgId:
+          type: string
+          example: 1234567890
+        name:
+          type: string
+          example: Muhibul Akhter
+        name_bn:
+          type: string
+          example: মুহিবুল আখতার
+        classLevel:
+          type: string
+          example: SIX
+        section:
+          type: string
+          example: A
+        rollNo:
+          type: string
+          example: 12
+        version:
+          type: string
+          example: BANGLA
+        shift:
+          type: string
+          example: MORNING
+        group:
+          type: string
+          example: SCIENCE
+        subjects:
+          type: array
+          example:
+            - BANGLA
+          items:
+            type: string
+        isThroughCad:
+          type: boolean
+          example: false
+    Version:
+      type: object
+      properties:
+        version:
+          type: string
+          example: BANGLA
+        shifts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Shift'
+    Shift:
+      type: object
+      properties:
+        shift:
+          type: string
+          example: MORNING
+        internalResultRequirement:
+          description: minimum result required for admitting the same institute's student
+          type: number
+          example: 3.25
+        specialResultRequirement:
+          description: minimum result required for admitting the special institute's student
+          type: number
+          example: 3.5
+        externalResultRequirement:
+          description: minimum result required for admitting general student
+          type: number
+          example: 4.5
+        sections:
+          type: array
+          items:
+            $ref: '#/components/schemas/Section'
+    Section:
+      type: object
+      properties:
+        section:
+          type: string
+          example: A
+        noOfSeat:
+          type: number
+          example: 50
+    Result:
+      required:
+        - eiin
+        - result
+      type: object
+      properties:
+        group:
+          type: string
+          example: SCIENCE
+        result:
+          type: string
+          example: A+
+        session:
+          type: string
+          example: 2020-21
+        instituteId:
+          type: string
+          example: 1234-5678-9010
+        eiin:
+          type: string
+          example: 1234567890
+        instituteName:
+          type: string
+          example: Faridpur Zilla School
+        subjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/Subject'
+    Subject:
+      type: object
+      properties:
+        subject:
+          type: string
+          example: BANGLA
+        marks:
+          type: string
+          example: A+
+    InstituteProfile:
+      required:
+      - eiin
+      - name
+      type: object
+      properties:
+        instituteId:
+          type: string
+          example: 1212-3124-8976
+        eiin:
+          type: string
+          example: 120719
+        name:
+          type: string
+          example: Dinajpur Zilla School
+        name_bn:
+          type: string
+          example: দিনাজপুর জিলা স্কুল
+        districtCode:
+          type: string
+          example: DINAJPUR
+        thanaCode:
+          type: string
+          example: DINAJPUR
+    ExamType:
+      type: object
+      properties:
+        examType:
+          type: string
+          example: SSC
+        groups:
+          type: array
+          items:
+            $ref: '#/components/schemas/Group'
+    Group:
+      type: object
+      properties:
+        group:
+          type: string
+          example: SCIENCE
+        subjects:
+          type: array
+          items:
+            type: string
+          example:
+          - BANGLA
+          - MATH
+    StudentProfile:
+      type: object
+      required:
+      - name
+      - fathersName
+      - eiin
+      - studentCrvsId
+      - mobileNo
+      properties:
+        classLevel:
+          type: string
+          example: SIX
+        studentCrvsId:
+          type: string
+          example: 12345-2021-12345
+        studentOrgId:
+          type: string
+          example: "1234567890"
+        name:
+          type: string
+          example: Muhibul Akhter
+        name_bn:
+          type: string
+          example: মুহিবুল আখতার
+        fathersName:
+          type: string
+          example: Mustafa Akhter
+        fathersName_bn:
+          type: string
+          example: মুস্তাফা আখতার
+        mothersName:
+          type: string
+          example: Shirin Akhter
+        mothersName_bn:
+          type: string
+          example: শিরিন আখতার
+        gender:
+          type: string
+          example: MALE
+        dateOfBirth:
+          type: string
+          format: date (yyyy-mm-dd)
+          example: "2005-06-23"
+        religion:
+          type: string
+          example: ISLAM
+        nationality:
+          type: string
+          example: BGD
+        eiin:
+          type: string
+          example: "123456"
+        classYear:
+          type: number
+          example: 2020
+        section:
+          type: string
+          example: A
+        rollNo:
+          type: string
+          example: "25"
+        version:
+          type: string
+          example: BANGLA
+        shift:
+          type: string
+          example: MORNING
+        group:
+          type: string
+          example: SCIENCE
+        mobileNo:
+          type: string
+          format: phone
+          example: "01XXXXXXXXX"
+        email:
+          type: string
+          format: email
+          example: muhib@somemail.com
+        homeDistrict:
+          type: string
+          example: BARISAL
+        photo:
+          type: string
+          format: url
+          example: https://images.crvs.com/1234.png

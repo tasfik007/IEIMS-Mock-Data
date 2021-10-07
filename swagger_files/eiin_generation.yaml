@@ -1,0 +1,102 @@
+openapi: 3.0.0
+info:
+  title: Necessary API from EIIN generation
+  description: EIIN generation API needed for developing semi-critical modules
+  version: 0.1.0
+tags:
+- name: EIIN generation
+  description: Get institution related information
+paths:
+  /institute-details/{instituteId}:
+    get:
+      tags:
+      - EIIN generation
+      summary: Details of an institute
+      description: Get the details of an institute by the Institute ID
+      parameters:
+      - name: instituteId
+        in: path
+        description: Information of the institute
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Institute's profile fetched successfully by Institute ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InstituteInformation'
+        "404":
+          description: Institute with the given instituteId does not exist
+  
+  /institute-details-eiin/{eiin}:
+    get:
+      tags:
+      - EIIN generation
+      summary: Details of an institute
+      description: Get the details of an institute by the Institute ID
+      parameters:
+      - name: eiin
+        in: path
+        description: Information of the institute
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Institute's profile fetched succesfully by EIIN
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InstituteInformation'
+        "404":
+          description: Institute with the given instituteId does not exist
+
+components:
+  schemas:
+    InstituteInformation:
+      required:
+      - address
+      - district
+      - eiin
+      - headOfIntitute
+      - instituteId
+      - mobileNo
+      - name
+      - name_bn
+      - phoneNo
+      type: object
+      properties:
+        instituteId:
+          type: string
+          example: 1212-3124-8976
+        name:
+          type: string
+          example: Dinajpur Zilla School
+        name_bn:
+          type: string
+          example: দিনাজপুর জিলা স্কুল
+        eiin:
+          type: string
+          example: "120719"
+        address:
+          type: string
+          format: address
+          example: Dinajpur Sadar
+        phoneNo:
+          type: string
+          format: phone number
+          example: "02XXXXXXX"
+        mobileNo:
+          type: string
+          format: mobile number
+          example: "8801XXXXXXXXXX"
+        headOfInstitute:
+          type: string
+          example: Muhibul Akhter
+        district:
+          type: string
+          example: BARISAL

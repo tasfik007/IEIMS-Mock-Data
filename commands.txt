@@ -1,0 +1,4 @@
+json-server --watch db.json
+json-server db.json --routes routes.json
+
+https://editor.swagger.io/

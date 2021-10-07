@@ -1,0 +1,139 @@
+openapi: 3.0.0
+info:
+  title: API related to student profile from CRVS (BANBEIS)
+  description: Necessary API to be exposed from CRVS (BANBEIS) for student profile
+  version: 0.1.0
+paths:
+  /crvs-students/{crvsId}:
+    get:
+      tags:
+      - crvs
+      summary: Student profile by CRVS-STD-ID
+      description: Get student profile information stored in CRVS system using CRVS-STD-ID
+      operationId: getCrvsStudentProfileByStdId
+      parameters:
+      - name: crvsId
+        in: path
+        description: The unique CRVS-STD-ID
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Profile Information of the Student
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentProfile'
+        "404":
+          description: Student with the given crvsId does not exist
+  /org-students/{orgId}:
+    get:
+      tags:
+      - crvs
+      summary: Student Profile By CRVS-ORG-ID
+      description: Get student profile information stored in CRVS system using ORG ID
+      operationId: getCrvsStudentProfileByOrgId
+      parameters:
+      - name: orgId
+        in: path
+        description: The unique CRVS-ORG-ID
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Profile Information of the Student
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentProfile'
+        "404":
+          description: Student with the given orgId does not exist
+components:
+  schemas:
+    StudentProfile:
+      type: object
+      required:
+      - name
+      - fathersName
+      - eiin
+      - studentCrvsId
+      - mobileNo
+      properties:
+        classLevel:
+          type: string
+          example: SIX
+        studentCrvsId:
+          type: string
+          example: 12345-2021-12345
+        studentOrgId:
+          type: string
+          example: "1234567890"
+        name:
+          type: string
+          example: Muhibul Akhter
+        name_bn:
+          type: string
+          example: মুহিবুল আখতার
+        fathersName:
+          type: string
+          example: Mustafa Akhter
+        fathersName_bn:
+          type: string
+          example: মুস্তাফা আখতার
+        mothersName:
+          type: string
+          example: Shirin Akhter
+        mothersName_bn:
+          type: string
+          example: শিরিন আখতার
+        gender:
+          type: string
+          example: MALE
+        dateOfBirth:
+          type: string
+          format: date (yyyy-mm-dd)
+          example: "2005-06-23"
+        religion:
+          type: string
+          example: ISLAM
+        nationality:
+          type: string
+          example: BGD
+        eiin:
+          type: string
+          example: "123456"
+        classYear:
+          type: number
+          example: 2020
+        section:
+          type: string
+          example: A
+        rollNo:
+          type: string
+          example: "25"
+        version:
+          type: string
+          example: BANGLA
+        shift:
+          type: string
+          example: MORNING
+        group:
+          type: string
+          example: SCIENCE
+        mobileNo:
+          type: string
+          format: phone
+          example: "01XXXXXXXXX"
+        email:
+          type: string
+          format: email
+          example: muhib@somemail.com
+        homeDistrict:
+          type: string
+          example: BARISAL
+        photo:
+          type: string
+          format: url
+          example: https://images.crvs.com/1234.png

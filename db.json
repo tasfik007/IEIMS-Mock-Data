@@ -1,0 +1,102 @@
+{
+  "institutions": [
+      {
+          "instituteId": "1",
+          "name": "Karatitola C. M. S. Memorial High School And College",
+          "name_bn": "কারাতিটোলা সিএমএস মেমোরিয়াল হাই স্কুল অ্যান্ড কলেজ",
+          "eiin": "108501",
+          "address": "Hazaribagh, Dhaka",
+          "phoneNo": "9875643",
+          "mobileNo": "+8801919206343",
+          "headOfInstitute": "Sultana Mahmuda",
+          "district": "DHAKA"
+      },
+      {
+          "instituteId": "2",
+          "name": "National Bank Public School And College",
+          "name_bn": "ন্যাশনাল ব্যাংক পাবলিক স্কুল এন্ড কলেজ",
+          "eiin": "108356",
+          "address": "Hazaribagh, Dhaka",
+          "phoneNo": "8321659",
+          "mobileNo": "",
+          "headOfInstitute": "Mokarram Ali Khan",
+          "district": "DHAKA"
+      },
+      {
+          "instituteId": "3",
+          "name": "Jatrabari Ideal High School And College",
+          "name_bn": "যাত্রাবাড়ী আইডিয়াল হাই স্কুল এন্ড কলেজ",
+          "eiin": "107877",
+          "address": "Hazaribagh, Dhaka",
+          "phoneNo": "8567413",
+          "mobileNo": "+8801921092291",
+          "headOfInstitute": "Mariam Begum",
+          "district": "DHAKA"
+      },
+      {
+          "instituteId": "4",
+          "name": "Paradogar Ideal School And College",
+          "name_bn": "পারাদোগার আইডিয়াল স্কুল ও কলেজ",
+          "eiin": "107877",
+          "address": "Hazaribagh, Dhaka",
+          "phoneNo": "9586214",
+          "mobileNo": "+8801295874632",
+          "headOfInstitute": "Mohammad Mojibur Rahman",
+          "district": "DHAKA"
+      }
+  ],
+  "crvs-students": [
+    {
+      "classLevel": "SIX",
+      "studentCrvsId": "1234",
+      "studentOrgId": "1234567890",
+      "name": "Muhibul Akhter",
+      "name_bn": "মুহিবুল আখতার",
+      "fathersName": "Mustafa Akhter",
+      "fathersName_bn": "মুস্তাফা আখতার",
+      "mothersName": "Shirin Akhter",
+      "mothersName_bn": "শিরিন আখতার",
+      "gender": "MALE",
+      "dateOfBirth": "2005-06-23",
+      "religion": "ISLAM",
+      "nationality": "BGD",
+      "eiin": "123456",
+      "classYear": 2020,
+      "section": "A",
+      "rollNo": "25",
+      "version": "BANGLA",
+      "shift": "MORNING",
+      "group": "SCIENCE",
+      "mobileNo": "01XXXXXXXXX",
+      "email": "muhib@somemail.com",
+      "homeDistrict": "BARISAL",
+      "photo": "https://images.crvs.com/1234.png"
+    },
+    {
+      "classLevel": "SEVEN",
+      "studentCrvsId": "5261",
+      "studentOrgId": "4234567890",
+      "name": "Tasrif Ahmed",
+      "name_bn": "মুহিবুল আখতার",
+      "fathersName": "Mustafa Akhter",
+      "fathersName_bn": "মুস্তাফা আখতার",
+      "mothersName": "Shirin Akhter",
+      "mothersName_bn": "শিরিন আখতার",
+      "gender": "MALE",
+      "dateOfBirth": "2005-06-23",
+      "religion": "ISLAM",
+      "nationality": "BGD",
+      "eiin": "123456",
+      "classYear": 2020,
+      "section": "A",
+      "rollNo": "25",
+      "version": "BANGLA",
+      "shift": "MORNING",
+      "group": "SCIENCE",
+      "mobileNo": "01XXXXXXXXX",
+      "email": "muhib@somemail.com",
+      "homeDistrict": "BARISAL",
+      "photo": "https://images.crvs.com/1234.png"
+    }
+  ]
+}
