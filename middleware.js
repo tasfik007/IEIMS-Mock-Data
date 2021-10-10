@@ -1,62 +1,43 @@
-"use strict";
-
 module.exports = (req, res, next) => {
   const _send = res.send;
-  const single = require("url").parse(req.originalUrl, true).query["single"];
-  const filter_result = require("url").parse(req.originalUrl, true).query[
-    "filter-result"
-  ];
-  const filter_profile = require("url").parse(req.originalUrl, true).query[
-    "filter-profile"
-  ];
-  const classCode = require("url").parse(req.originalUrl, true).query[
-    "classCode"
-  ];
-
-  var answer = null;
-  var queryPassed = false;
+  const requestPath = require("url").parse(req.originalUrl, true);
+  const queryParams = {
+    single: requestPath.query["single"],
+    filter_result: requestPath.query["filter-result"],
+    filter_profile: requestPath.query["filter-profile"],
+    classCode: requestPath.query["classCode"]?.toString().toLowerCase(),
+  };
+  let hasQuery = false;
+  for (let key in queryParams) hasQuery = hasQuery || queryParams[key];
 
   res.send = function (body) {
-    if (single) {
-      queryPassed = true;
+    let answer = null;
+    if (!hasQuery) _send.call(this, body);
+    if (queryParams["single"]) {
       try {
         const json = JSON.parse(body);
         if (Array.isArray(json)) {
           if (json.length === 1) {
             answer = json[0];
           } else if (json.length === 0) {
-            answer = {};
+            answer = null;
           }
         }
       } catch (e) {}
     }
 
-    if (filter_result) {
-      queryPassed = true;
-      delete answer["result"];
-    } else if (filter_profile) {
-      queryPassed = true;
-      var classExist = false;
-      answer["result"].forEach((result) => {
-        
-        if (result["class"].toLowerCase() === classCode.toLowerCase()) {
-          classExist = true;
+    if (queryParams["filter_result"]) delete answer["result"];
+    if (queryParams["filter_profile"]) {
+      let results = answer["result"];
+      results.forEach((result) => {
+        if (result["class"].toLowerCase() === queryParams["classCode"]) {
           answer = result;
         }
       });
-
-      if (classExist === false) answer = {};
     }
 
-    answer = JSON.stringify(answer);
-
-    if (queryPassed === false) return _send.call(this, body);
-
-    if (answer === null) {
-      return _send.call(this, "{}", 404);
-    } else {
-      return _send.call(this, answer);
-    }
+    if (answer === null) return _send.call(this, "{}", 404);
+    return _send.call(this, JSON.stringify(answer));
   };
   next();
 };
