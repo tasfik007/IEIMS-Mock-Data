@@ -1,5 +1,5 @@
 json-server --watch db.json
 json-server db.json --routes routes.json
-json-server db.json --routes routes.json  --middlewares singular.js
+json-server db.json --routes routes.json  --middlewares middleware.js
 
 https://editor.swagger.io/

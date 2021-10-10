@@ -3,7 +3,7 @@
       {
           "instituteId": "1",
           "name": "Karatitola C. M. S. Memorial High School And College",
-          "name_bn": "কারাতিটোলা সিএমএস মেমোরিয়াল হাই স্কুল অ্যান্ড কলেজ",
+          "name_bn": "করাতিটোলা সিএমএস মেমোরিয়াল হাই স্কুল অ্যান্ড কলেজ",
           "eiin": "108501",
           "address": "Hazaribagh, Dhaka",
           "phoneNo": "9875643",
@@ -163,7 +163,24 @@
       "mobileNo": "01694855479",
       "email": "abir@hotmail.com",
       "homeDistrict": "SYLHET",
-      "photo": "https://images.crvs.com/1478.png"
+      "photo": "https://images.crvs.com/1478.png",
+      "result": [
+        {
+          "class": "SEVEN",
+          "group": "SCIENCE",
+          "result": "A",
+          "session": "2020-21",
+          "instituteId": "1234-5678-9010",
+          "eiin": "1234567890",
+          "instituteName": "Faridpur Zilla School",
+          "subjects": [
+            {
+              "subject": "BANGLA",
+              "marks": "A+"
+            }
+          ]
+        }
+      ]
     },
     {
       "classLevel": "EIGHT",
